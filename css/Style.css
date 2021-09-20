@@ -1,0 +1,39 @@
+.navbar .container {
+  width: 200px;
+  margin-left: 100px;
+}
+
+.navbar .nav-link {
+  margin: 0 5px;
+}
+
+.navbar .cart {
+  background-color: transparent;
+  border: none;
+  margin-right: 100px;
+}
+
+.navbar .cart svg {
+  color: #5D5D5D;
+}
+
+.navbar .cart span {
+  position: relative;
+  top: -10px;
+  background-color: #E21F26;
+  color: #fff;
+  width: 6px;
+  height: 6px;
+  padding: 0 4px;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.products-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=Style.css.map */

@@ -1,15 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import NavBar from "./components/NavBar"
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>LEXTEC - Ecommerce</h1>
-        <h3>By Antony Huerto 2021</h3>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <ItemListContainer />
+    </>
   );
 }
 
