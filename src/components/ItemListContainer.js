@@ -1,9 +1,9 @@
 import React from "react"
 import "../../src/Style.scss"
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     return(
-        <main className="products-container">Aquí irá el catálogo de productos</main>
+        <main className="products-container">{props.greeting} a LEXTEC</main>
     )
 }
 
