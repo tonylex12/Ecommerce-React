@@ -12,7 +12,7 @@ const NavBar = () => {
                 <Brand />
             </Container>
                 <MenuNav />
-                <CartWidget />
+                <CartWidget items={0}/>
         </Navbar>
     )
 }
