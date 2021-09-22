@@ -6,13 +6,14 @@ import CartWidget from "./CartWidget"
 
 
 const NavBar = () => {
+    const items = 0
     return(
         <Navbar bg="light" fixed="top">
             <Container>
                 <Brand />
             </Container>
                 <MenuNav />
-                <CartWidget items={0}/>
+                <CartWidget items={items}/>
         </Navbar>
     )
 }
