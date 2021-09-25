@@ -36,4 +36,30 @@
   justify-content: center;
   align-items: center;
 }
+
+.products-container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.products-container .card .card-title {
+  text-align: center;
+}
+
+.products-container .card .count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.products-container .card .count-container .btn {
+  margin: 0 auto;
+}
+
+.products-container .card .count-container p {
+  margin: 0 20px;
+}
 /*# sourceMappingURL=Style.css.map */
