@@ -38,8 +38,20 @@
         justify-content: center;
         align-items: center;
         margin: 10px;
-        .card-title {
+        &-title {
             text-align: center;
+        }
+        &-img-top {
+            width: 250px;
+            margin: 0 auto;
+        }
+        &-text {
+            text-align: center;
+        }
+        button {
+            padding: .5rem;
+            margin: .5rem auto;
+            display: block;
         }
         .count-container {
             display: flex;

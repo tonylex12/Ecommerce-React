@@ -44,8 +44,23 @@
   margin: 10px;
 }
 
-.products-container .card .card-title {
+.products-container .card-title {
   text-align: center;
+}
+
+.products-container .card-img-top {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.products-container .card-text {
+  text-align: center;
+}
+
+.products-container .card button {
+  padding: .5rem;
+  margin: .5rem auto;
+  display: block;
 }
 
 .products-container .card .count-container {

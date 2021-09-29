@@ -1,15 +1,28 @@
 import React from "react"
-import ItemCount  from "./ItemCount"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 
-const Item = ({nombre, initial, stock}) => {
+const Item = ({title, stock, price, description, pictureUrl}) => {
     return(
         <Card>
             <Card.Body>
-                <Card.Title>{nombre}</Card.Title>
-                <ItemCount initial={initial} stock={stock}/>
-                <Button>Añadir al carrito</Button>
+                <Card.Title>
+                    {title}
+                </Card.Title>
+                <Card.Img
+                    variant="top"
+                    src={pictureUrl} 
+                />
+                <Card.Text>
+                    ${price}
+                </Card.Text>
+                <Card.Text>
+                    {description}
+                </Card.Text>
+                <Button>Ver detalle del producto</Button>
+                <Card.Text>
+                    Disponibles: {stock}
+                </Card.Text>
             </Card.Body>
         </Card>
     )

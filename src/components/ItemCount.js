@@ -16,11 +16,17 @@ const ItemCount = ({initial, stock}) => {
 
     return(
         <div className="count-container">
-            <Button onClick={decrement}>
+            <Button 
+                onClick={decrement}
+                disabled={count === initial}
+            >
                 <FaMinus size={5}/>
             </Button>
             <p>{count}</p>
-            <Button onClick={increment}>
+            <Button 
+                onClick={increment}
+                disabled={count === stock}
+            >
                 <FaPlus size={5}/>
             </Button>
         </div>
