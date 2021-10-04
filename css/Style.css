@@ -33,8 +33,10 @@
   position: relative;
   top: 100px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0 4rem;
 }
 
 .products-container .card {
@@ -61,6 +63,8 @@
   padding: .5rem;
   margin: .5rem auto;
   display: block;
+  background-color: #E21F26;
+  border: none;
 }
 
 .products-container .card .count-container {

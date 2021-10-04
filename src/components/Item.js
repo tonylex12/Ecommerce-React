@@ -13,12 +13,6 @@ const Item = ({title, stock, price, description, pictureUrl}) => {
                     variant="top"
                     src={pictureUrl} 
                 />
-                <Card.Text>
-                    ${price}
-                </Card.Text>
-                <Card.Text>
-                    {description}
-                </Card.Text>
                 <Button>Ver detalle del producto</Button>
                 <Card.Text>
                     Disponibles: {stock}

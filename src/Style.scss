@@ -31,8 +31,10 @@
     position: relative;
     top: 100px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 0 4rem;
     .card {
         display: flex;
         justify-content: center;
@@ -52,6 +54,8 @@
             padding: .5rem;
             margin: .5rem auto;
             display: block;
+            background-color: #E21F26;
+            border: none;
         }
         .count-container {
             display: flex;

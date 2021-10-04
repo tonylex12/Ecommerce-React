@@ -22,6 +22,7 @@ const Brand = () => {
     return(
         <Navbar.Brand>
             <img
+                alt=""
                 src={logo}
             />
         </Navbar.Brand>
