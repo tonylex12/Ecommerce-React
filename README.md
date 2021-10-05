@@ -1,6 +1,6 @@
 # LEXTEC E-COMMERCE PROJECT
 
-Proyecto creado para el curso de REACT en CODERHOUSE.
+Proyecto creado para el curso de React JS en CODERHOUSE.
 
 **Profesor**: Gustavo Adolfo García Blanco
 
