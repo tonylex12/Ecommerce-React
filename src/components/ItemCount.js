@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button"
 import { FaMinus } from "react-icons/fa"
 import { FaPlus } from "react-icons/fa"
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({stock, initial}) => {
     let [count, setCount] = useState(initial)
 
     const increment = () => {
-        if (count < stock) setCount(++count)
+        if (count < stock) {setCount(++count);}
     }
 
     const decrement = () => {

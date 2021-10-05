@@ -1,38 +1,34 @@
-import React, { useState, useEffect } from "react"
-import Item from "./Item"
+import React from "react"
+import {Link} from "react-router-dom"
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
+import Counter from "./ItemCount"
 
-const ItemList = () => {
-
-    const [data, setData] = useState([])
-
-    useEffect(()=>{
-        const fetchData = fetch('./data/data.json')
-        fetchData
-        .then((getData) => {
-            if (getData.status === 200 ) {
-                return getData.json()
-            }
-        })
-        .then((getData)=>{
-            setTimeout(() => {
-                setData(getData)
-            }, 2000);
-        })
-    }, [])
-
-    return (
-        <>
-            { data.map((product) => {
-                return(
-                    <Item
-                        key={product.id}
-                        title={product.name}
-                        pictureUrl={product.pictureUrl}
-                        stock={product.stock}
-                    />
-                )
-            })}
-        </>
+const ItemList = ({name, stock, price, pictureUrl, id}) => {
+    return(
+        <Card>
+            <Card.Body>
+                <Card.Title>
+                    {name}
+                </Card.Title>
+                <Card.Img
+                    variant="top"
+                    src={pictureUrl} 
+                />
+                <Link to={`/producto/${id}`}>Ver detalle del producto</Link>
+                <Card.Text>
+                    ${price}
+                </Card.Text>
+                <Counter
+                    initial={1}
+                    stock={stock} 
+                />
+                <Card.Text>
+                    Disponibles: {stock}
+                </Card.Text>
+                <Button>Añadir al carrito</Button>
+            </Card.Body>
+        </Card>
     )
 }
 

@@ -1,6 +1,20 @@
-.navbar .container {
-  width: 200px;
+.navbar a {
   margin-left: 100px;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar .search {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.navbar .search input {
+  width: 250px;
+  margin: 0 1rem;
 }
 
 .navbar .nav-link {
@@ -11,6 +25,7 @@
   background-color: transparent;
   border: none;
   margin-right: 100px;
+  margin-left: 2rem;
 }
 
 .navbar .cart svg {
@@ -31,7 +46,7 @@
 
 .products-container {
   position: relative;
-  top: 100px;
+  top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,6 +70,13 @@
   margin: 0 auto;
 }
 
+.products-container .card a {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
 .products-container .card-text {
   text-align: center;
 }
@@ -75,10 +97,36 @@
 }
 
 .products-container .card .count-container .btn {
-  margin: 0 auto;
+  margin: 0 2px;
+}
+
+.products-container .card .count-container .btn:disabled {
+  opacity: 1;
 }
 
 .products-container .card .count-container p {
   margin: 0 20px;
+}
+
+.detail-container {
+  position: relative;
+  top: 100px;
+}
+
+.detail-container .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.detail-container .details img {
+  width: 30%;
+}
+
+.detail-container .details .btn {
+  background-color: #E21F26;
+  border: none;
 }
 /*# sourceMappingURL=Style.css.map */
