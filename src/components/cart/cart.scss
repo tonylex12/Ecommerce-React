@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    top: 100px;
+    margin: 2rem auto;
+    .cart-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .btn-primary {
+            background-color: #E21F26;
+            border: none;
+            margin: 4px auto;
+        }
+    }
+}

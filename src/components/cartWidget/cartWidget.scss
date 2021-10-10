@@ -1,0 +1,39 @@
+.cartWidget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #424242;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        display: inline-block;
+        text-align: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color:#E21F26;
+        position: absolute;
+        bottom: -30%;
+        left: 0;
+        color:white;
+    }
+    svg {
+        width: 3rem;
+        path {
+            fill:white;
+        }
+        .cruz {
+            display: none;
+        }
+        .cartInner {
+            display: block;
+        }
+        &.close .cartInner {
+            display:none;
+        }
+    }
+}

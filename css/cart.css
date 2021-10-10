@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+  top: 100px;
+  margin: 2rem auto;
+}
+
+.container .cart-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .cart-details .btn-primary {
+  background-color: #E21F26;
+  border: none;
+  margin: 4px auto;
+}
+/*# sourceMappingURL=cart.css.map */

@@ -1,0 +1,16 @@
+.counter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.counter-container p {
+  margin: 0;
+}
+
+.btn-danger {
+  background-color: #E21F26 !important;
+}
+/*# sourceMappingURL=itemcount.css.map */

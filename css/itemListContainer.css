@@ -1,0 +1,37 @@
+.products-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10rem;
+}
+
+.products-container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.products-container .card-title {
+  text-align: center;
+}
+
+.products-container .card-img-top {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.products-container .card a {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.products-container .card-text {
+  text-align: center;
+}
+/*# sourceMappingURL=itemListContainer.css.map */

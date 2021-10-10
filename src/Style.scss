@@ -17,26 +17,6 @@
     .nav-link {
         margin: 0 5px;
     }
-    .cart {
-        background-color: transparent;
-        border: none;
-        margin-right: 100px;
-        margin-left: 2rem;
-        svg {
-            color:#5D5D5D;
-        }
-        span {
-            position: relative;
-            top: -10px;
-            background-color: #E21F26;
-            color: #fff;
-            width: 6px;
-            height: 6px;
-            padding: 0 4px;
-            border-radius: 50%;
-            font-size: 1rem;
-        }
-    }
 }
 
 .products-container {
@@ -74,21 +54,6 @@
             display: block;
             background-color: #E21F26;
             border: none;
-        }
-        .count-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
-            .btn {
-                margin: 0 2px;
-            }
-            .btn:disabled {
-                opacity: 1;
-            }
-            p {
-                margin: 0 20px;
-            }
         }
     }
 }

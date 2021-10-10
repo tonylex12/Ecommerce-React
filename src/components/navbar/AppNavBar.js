@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "../../src/logo-01.svg"
+import logo from "./logo-01.svg"
 import {Link, NavLink} from 'react-router-dom'
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button"
-import "../../src/Style.scss"
-import CartWidget from "./CartWidget"
+import CartWidget from "../cartWidget/CartWidget"
+import "./appNavBar.scss"
 
 class AppNavBar extends React.Component {
     constructor() {
@@ -59,7 +59,7 @@ class AppNavBar extends React.Component {
                     </Form>
                 </Navbar.Collapse>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <CartWidget items={0}/>
+                <CartWidget />
             </Navbar>
             
         )

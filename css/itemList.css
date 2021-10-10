@@ -1,0 +1,13 @@
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .addToCart {
+  margin-top: 1rem;
+  background-color: #E21F26;
+  border: none;
+  width: 120px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=itemList.css.map */

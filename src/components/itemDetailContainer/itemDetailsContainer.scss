@@ -1,0 +1,11 @@
+
+.itemDetailContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(94,94,94,0.15);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(94,94,94,0.15);
+        box-shadow: 0px 0px 10px 1px rgba(94,94,94,0.15);
+}

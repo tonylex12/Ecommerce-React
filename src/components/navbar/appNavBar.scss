@@ -1,0 +1,35 @@
+.navbar {
+    a {
+        margin-left: 100px;
+    }
+    &-nav {
+        margin: 0 auto;
+    }
+    .search {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-right: 100px;
+        input {
+            width: 250px;
+            margin: 0 1rem;
+        }
+    }
+    .nav-link {
+        margin: 0 5px;
+    }
+}
+
+
+.navbar-light {
+	.navbar-nav {
+		.nav-link.active {
+			color: #e21f26;
+		}
+		.show {
+			>.nav-link {
+				color: #e21f26;
+			}
+		}
+	}
+}
