@@ -1,13 +1,34 @@
-.counter-container {
+.counter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    .btn {
+        margin: 1rem .5rem;
+    }
+    .btn-primary {
+        background-color: #E21F26;
+        border: none;
+    }
+    .btn-outline-primary {
+        border-color: #E21F26;
+        color: #E21F26;
+    }
+    .btn-outline-primary:hover {
+        color: #fff;
+        background-color: #E21F26;
+        border-color: #E21F26;
+    }
     p {
         margin:0;
     }
 }
-.btn-danger {
-    background-color: #E21F26 !important;
+.btn-primary {
+    background-color: #E21F26;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #E21F26;
+    border: none;
 }

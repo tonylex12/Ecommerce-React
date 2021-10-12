@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'; 
 //context
-import {StoreContext} from '../../context/StoreContext'
+import {StoreContext, counterInitialState} from '../../context/StoreContext'
 //BOOTSTRAP
 
 import Button from "react-bootstrap/Button";
@@ -9,59 +9,46 @@ import { FaPlus } from "react-icons/fa"
 //STYLES
 import './itemcount.scss'
 
-
 const ItemCount = ({currentStock, item}) => {
 
     const { 
-        count, 
-        initial, 
-        handleIncrement, 
-        handleDecrement,
-        setAdded,
-        setStock,
-        added,
-        stock,
-        totalQuantity,
-        setTotalQuantity,
-        setCart,
-        cart
+        handleAdd,
+        dispatchCount,
+        counterCount
     } = useContext(StoreContext)
-
-    const toggleAdded = () => {
-        setAdded(!added);
-        setStock(stock - count);
-        setTotalQuantity(totalQuantity + 1);
-        if (cart.length === 0 ) {
-            setCart([{id:item.id,item:item,quantity:count}])
-        } else {
-            setCart(cart => [...cart, {id:item.id,item:item,quantity:count}])
-        }
-    }
 
     return (
         <>
-            <div className="counter-container">
+            <div className="counter">
                 <Button 
-                    onClick={handleDecrement} 
-                    disabled={count === initial}
+                    onClick={
+                        () => counterCount > counterInitialState ? 
+                            dispatchCount('COUNTER_DECREMENT'): 
+                            null
+                        }
+                    disabled={counterCount === counterInitialState}
                     variant="outline-secondary" 
                 >
                     <FaMinus size={20} />
                 </Button>
-                <p>{count}</p>
+                <p>{counterCount}</p>
                 <Button 
-                    onClick={handleIncrement} 
-                    disabled={count === currentStock} 
+                    onClick={
+                        () => counterCount < item.stock ?
+                            dispatchCount('COUNTER_INCREMENT'): 
+                            null
+                    } 
+                    disabled={counterCount === currentStock} 
                     variant="outline-secondary">
                     <FaPlus size={20} />
                 </Button>
             </div>
             <Button 
-                disabled={count === 0} 
-                variant={count === 0 ? 'outline-secondary' : 'danger'}
-                onClick={toggleAdded}
+                id={item.id}
+                disabled={counterCount === 0} 
+                variant={counterCount === 0 ? 'outline-secondary' : 'primary'}
+                onClick={handleAdd}
             >Agregar al carrito</Button>
-            
         </>
     )
 }

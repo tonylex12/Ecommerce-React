@@ -11,40 +11,37 @@ import './itemDetail.scss'
 
 const ItemDetail = ({item}) => {
 
-    const {name, pictureUrl, description, price, currentStock, id} = item
+    const {name, pictureUrl, price, currentStock, id} = item
 
     const { 
         added, 
-        initial, 
+        setAdded, 
         stock, 
         setStock, 
         setCount, 
-        setToggleItem,
-        toggleItem
+        dispatchCount,
     } = useContext(StoreContext)
 
     useEffect(() => {
+        dispatchCount('COUNTER_RESET')
         setStock(currentStock)
-        setCount(initial)
-        setToggleItem(!toggleItem)
+        setAdded(false)
     }, [])
 
 
     return(
         <>
-            <h3>{name}</h3>
             <div className="detailOverview">
                 <img alt={id} src={pictureUrl} />
                 <div className="detailsDescription">
-                    <h1>{name}</h1>
-                    <h3>$ {price}</h3>
-                    <p className="stock">Disponibles: {stock}</p>
+                    <h3>{name}</h3>
+                    <h2>$ {price}</h2>
+                    <p>Disponibles: {stock}</p>
                     {added ?
                         <div className='itemAdded'>
                             <Link 
                                 className='btn btn-primary'
                                 to={`/cart`}
-                                /* onClick={newItem} */
                             >Finalizar compra</Link>
                             <Link
                                 className='btn btn-outline-primary'
@@ -59,11 +56,11 @@ const ItemDetail = ({item}) => {
                                 id:id,
                                 name: name,
                                 price:price,
-                                pictureUrl:pictureUrl
+                                pictureUrl:pictureUrl,
+                                stock:stock
                             }}
                         />
                     }
-
                 </div>
             </div>
         </>

@@ -1,7 +1,22 @@
-import React, {createContext, useState, useEffect} from 'react'
+import React, {createContext, useState, useEffect, useCallback, useReducer} from 'react'
 
 export const StoreContext = createContext()
 const { Provider } = StoreContext
+
+export const counterInitialState = 0
+
+const counterReducer = (state, action) => {
+    switch (action) {
+        case 'COUNTER_INCREMENT':
+            return state + 1
+        case 'COUNTER_DECREMENT':
+            return state - 1
+        case 'COUNTER_RESET' :
+            return counterInitialState
+        default:
+            return state
+    }
+}
 
 const StoreProvider = ({children}) => {
 
@@ -26,27 +41,60 @@ const StoreProvider = ({children}) => {
     }, [])
 
     //Counter
-    const initial = 0
-    let [toggleItem, setToggleItem] = useState(false)
+    const [counterCount, dispatchCount] = useReducer(counterReducer, counterInitialState)
+    
     let [stock, setStock] = useState()
-    let [count, setCount] = useState(initial)
     let [added, setAdded] = useState(false)
     let [totalQuantity, setTotalQuantity] = useState(0)
     let [cart, setCart] = useState([])
 
-    useEffect(()=>{
-        setAdded(false)
-    },[toggleItem])
+    const handleAddToStock = (id, quantity) => {
+        const newData = data
+        const objIndex =  newData.findIndex((obj => obj.id === id))
+        newData[objIndex].stock = newData[objIndex].stock  + quantity
+    }
+    const handleRemoveFromStock = (producto) => {
+        const newData = data
+        const objIndex = newData.findIndex((obj => obj.id === producto.id));
+        newData[objIndex].stock = stock - counterCount
+        setData(newData)
+    }
 
-    const handleIncrement = () => {
-        if (count < stock) {
-            setCount(++count);
+    const handleDuplicates = (targetId, product, countInsideTheLoop) => {
+        const isAlreadyInCart = cart.filter( cart => cart.id === targetId)
+        console.log(isAlreadyInCart)
+        if (isAlreadyInCart.length === 0) {
+            console.log(product)
+            const newProduct = {id: product.id, item: product, quantity: countInsideTheLoop}
+            setCart(cart => [...cart, newProduct])
+            setStock(stock - counterCount);
+            setTotalQuantity(totalQuantity + 1);
+            handleRemoveFromStock(product)
+        } else {
+            const newCart = cart
+            const objIndex = newCart.findIndex((obj => obj.id === targetId))
+            newCart[objIndex].quantity = newCart[objIndex].quantity + countInsideTheLoop
+            setCart(newCart)
+            setStock(stock - counterCount);
+            handleRemoveFromStock(product)
         }
     }
-    const handleDecrement = () => {
-        if (count > initial) {
-            setCount(--count)
-        };
+
+    const handleAdd = (e) => {
+        setAdded(!added);
+        for (const product of data) {
+            const countInsideTheLoop = counterCount
+            if (product.id === e.target.id && cart.length === 0) {
+                const newProduct = {id:product.id,item:product,quantity:countInsideTheLoop}
+                setCart(cart => [...cart, newProduct])
+                setStock(stock - counterCount);
+                setTotalQuantity(totalQuantity + 1);
+                handleRemoveFromStock(product)
+            } else if (product.id === e.target.id) {
+                handleDuplicates(e.target.id, product, countInsideTheLoop)
+                break 
+            } 
+        }
     }
 
     const handleRemove = (e) => {
@@ -55,6 +103,12 @@ const StoreProvider = ({children}) => {
                 return arr 
             }
         })
+        for (const productsInCart of cart) {
+            if (productsInCart.id === e.target.id) {
+                handleAddToStock(e.target.id, productsInCart.quantity)
+            }
+        }
+        console.log(itemDeleted)
         setCart(itemDeleted)
         setTotalQuantity(totalQuantity - 1)
     }
@@ -62,30 +116,20 @@ const StoreProvider = ({children}) => {
     return(
         <Provider 
             value={{
-                /*Global Data*/
+                //DATA
                 data: data,
                 loading: loading,
-                setLoading:setLoading,
-                /*Item Detail Data*/
-                toggleItem:toggleItem,
-                setToggleItem:setToggleItem,
-                initial: initial,
                 stock: stock,
                 setStock: setStock,
-                count:count,
-                setCount:setCount,
-                /*Count Data*/
-                handleIncrement: handleIncrement,
-                handleDecrement: handleDecrement,
                 added:added,
                 setAdded:setAdded,
-                //Cart Data
+                handleAdd:handleAdd,
                 setCart:setCart,
                 cart: cart,
                 handleRemove:handleRemove,
-                //CartWidget Data
                 totalQuantity:totalQuantity,
-                setTotalQuantity:setTotalQuantity
+                counterCount:counterCount, 
+                dispatchCount:dispatchCount
             }}
         >
             {children}
