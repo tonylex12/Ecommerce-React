@@ -32,6 +32,7 @@ const ItemDetailContainer = () => {
                                     description : product.description,
                                     price : product.price,
                                     currentStock : product.stock,
+                                    specs: product.specifications,
                                     params: params.id
                                 }}
                         /> 

@@ -6,7 +6,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/hp14.png",
-        "stock": 10
+        "stock": 10,
+        "specifications": {
+            "screen": "14 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "8 GB",
+            "processor": "Intel i5 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "MACBOOK AIR",
@@ -15,7 +24,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/macbookAir.png",
-        "stock": 11
+        "stock": 11,
+        "specifications": {
+            "screen": "15 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "8 GB",
+            "processor": "Intel i7 1700",
+            "os": "Mac OS",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "MSI MODERN 14",
@@ -24,7 +42,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/modern14.png",
-        "stock": 16
+        "stock": 16,
+        "specifications": {
+            "screen": "17 pulgadas",
+            "storage": "512 GB SSD, 1TB HDD",
+            "ram": "16 GB",
+            "processor": "Intel i5 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "LENOVO YOGA S7",
@@ -33,7 +60,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/yogas7.png",
-        "stock": 13
+        "stock": 13,
+        "specifications": {
+            "screen": "15 pulgadas",
+            "storage": "1 TB SSD",
+            "ram": "16 GB",
+            "processor": "Intel i7 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "ACER INSPIRE 5",
@@ -42,7 +78,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/aspire5.png",
-        "stock": 15
+        "stock": 15,
+        "specifications": {
+            "screen": "15 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "4 GB",
+            "processor": "Intel i3 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "THINKBOOK 14",
@@ -51,7 +96,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/thinkbook14.png",
-        "stock": 12
+        "stock": 12,
+        "specifications": {
+            "screen": "15 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "8 GB",
+            "processor": "Intel i5 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "LG GRAM",
@@ -60,7 +114,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/lgGram.png",
-        "stock": 18
+        "stock": 18,
+        "specifications": {
+            "screen": "15 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "16 GB",
+            "processor": "Intel i5 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "MACBOOK PRO",
@@ -69,7 +132,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/macbookPro.png",
-        "stock": 17
+        "stock": 17,
+        "specifications": {
+            "screen": "17 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "16 GB",
+            "processor": "Intel i7 1700",
+            "os": "Mac OS",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "IDEAPAD 13",
@@ -78,7 +150,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/ideapad13.png",
-        "stock": 19
+        "stock": 19,
+        "specifications": {
+            "screen": "13 pulgadas",
+            "storage": "256 GB SSD",
+            "ram": "4 GB",
+            "processor": "Intel i3 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "MSI GF63",
@@ -87,7 +168,16 @@
         "category": "LAPTOPS",
         "description": "Details Random",
         "pictureUrl": "../img/laptops/msigf63.png",
-        "stock": 12
+        "stock": 12,
+        "specifications": {
+            "screen": "17 pulgadas",
+            "storage": "512 GB SSD",
+            "ram": "16 GB",
+            "processor": "Intel i9 1700",
+            "os": "Windows 10",
+            "frontalcamera": "SI",
+            "backcamera": "NO"
+        }
     },
     {
         "name": "IPHONE 12",
@@ -96,7 +186,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/iphone12.png",
-        "stock": 14
+        "stock": 14,
+        "specifications": {
+            "screen": "6.0 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "A14 Bionic chip",
+            "os": "iOS 15",
+            "frontalcamera": "12 MP f/2.2",
+            "backcamera": "12MP f/1.6 wide and ultra wide cameras"
+        }
     },
     {
         "name": "MI 11 LITE",
@@ -105,7 +204,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/mi11lite.png",
-        "stock": 15
+        "stock": 15,
+        "specifications": {
+            "screen": "6.55 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "Qualcomm SM7150 Snapdragon 732G",
+            "os": "Android 11, MIUI 12",
+            "frontalcamera": "16MP, f/2.5, 25mm",
+            "backcamera": "64MP, f/1.8, 26mm; 8MP, f/2.2, 119 (ultrawide); 5MP, f/2.4 (macro)"
+        }
     },
     {
         "name": "POCO F3",
@@ -114,7 +222,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/pocof3.png",
-        "stock": 18
+        "stock": 18,
+        "specifications": {
+            "screen": "6.67 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "Qualcomm SM8250-AC Snapdragon 870 5G (7 Nm)",
+            "os": "Android 11, MIUI 12.5",
+            "frontalcamera": "20 MP, f/2.5, (wide)",
+            "backcamera": "48 MP, f/1.8, 26mm (wide), 8 MP, f/2.2, 119˚ (ultrawide) 5 MP, f/2.4, 50mm (macro), 1/5.0, 1.12µm, AF"
+        }
     },
     {
         "name": "SAMSUNG S21",
@@ -123,7 +240,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/s21.png",
-        "stock": 16
+        "stock": 16,
+        "specifications": {
+            "screen": "6.2 pulgadas",
+            "storage": "256 GB",
+            "ram": "8 GB",
+            "processor": "Exynos 2100 (5 nm) / Qualcomm SM8350 Snapdragon 888 5G (5 nm)",
+            "os": "Android 11, One UI 3.1",
+            "frontalcamera": "10 MP, f/2.2, 26mm (wide)",
+            "backcamera": "12 MP, f/1.8, 26mm (wide), OIS 64 MP, f/2.0, 29mm (telephoto), 12 MP, f/2.2, 13mm, 120˚ (ultrawide)"
+        }
     },
     {
         "name": "HUAWEI Y7",
@@ -132,7 +258,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/huaweiy7.png",
-        "stock": 17
+        "stock": 17,
+        "specifications": {
+            "screen": "14 pulgadas",
+            "storage": "32 GB",
+            "ram": "3 GB",
+            "processor": "Qualcomm SDM450 Snapdragon 450 (14 nm)",
+            "os": "Android 8.1 (Oreo), EMUI 8.2",
+            "frontalcamera": "8MP",
+            "backcamera": "13 MP, f/1.8, PDAF 2 MP, (depth)"
+        }
     },
     {
         "name": "REDMI NOTE 9",
@@ -141,7 +276,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/redmiNote9.png",
-        "stock": 12
+        "stock": 12,
+        "specifications": {
+            "screen": "6.53 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "MediaTek Helio G85 (12nm)",
+            "os": "Android 10, MIUI 12",
+            "frontalcamera": "13 MP, f/2.3, 29mm (standard),",
+            "backcamera": "48 MP, f/1.8, 26mm (wide), 1/2.0, 8 MP, f/2.2, 118˚ (ultrawide), 2 MP, f/2.4, (macro), AF2 MP, f/2.4, (depth)"
+        }
     },
     {
         "name": "REDMI NOTE 10",
@@ -150,7 +294,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/redminote10.png",
-        "stock": 13
+        "stock": 13,
+        "specifications": {
+            "screen": "14 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "Qualcomm SDM678 Snapdragon 678 (11 nm)",
+            "os": "Android 11, MIUI 12.5",
+            "frontalcamera": "13 MP, f/2.5, (wide)",
+            "backcamera": "48 MP, f/1.8, 26mm (wide), 0.8µm, 8 MP, f/2.2, 118˚ (ultrawide), 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)"
+        }
     },
     {
         "name": "SAMSUNG A51",
@@ -159,7 +312,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/a51.png",
-        "stock": 15
+        "stock": 15,
+        "specifications": {
+            "screen": "6.5 pulgadas",
+            "storage": "128 GB",
+            "ram": "6 GB",
+            "processor": "Exynos 9611 (10nm)",
+            "os": "Android 10, upgradable to Android 11, One UI 3.1",
+            "frontalcamera": "32 MP, f/2.2, 26mm (wide)",
+            "backcamera": "48 MP, f/2.0, 26mm (wide), 12 MP, f/2.2, 123˚ (ultrawide)5 MP, f/2.4(macro) 5 MP, f/2.2, (depth)"
+        }
     },
     {
         "name": "IPHONE 11",
@@ -168,7 +330,16 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/iphone11.png",
-        "stock": 11
+        "stock": 11,
+        "specifications": {
+            "screen": "6.1 pulgadas",
+            "storage": "256 GB",
+            "ram": "4 GB",
+            "processor": "Apple A13 Bionic (7 nm+)",
+            "os": "iOS 13, upgradable to iOS 15",
+            "frontalcamera": "12 MP, f/2.2, 23mm (wide)",
+            "backcamera": "N12 MP, f/1.8, 26mm (wide), 12 MP, f/2.4 (ultrawide)"
+        }
     },
     {
         "name": "IPHONE SE",
@@ -177,16 +348,34 @@
         "category": "SMARTPHONES",
         "description": "Details Random",
         "pictureUrl": "../img/smartphones/iphoneSE.png",
-        "stock": 10
+        "stock": 10,
+        "specifications": {
+            "screen": "4.7 pulgadas",
+            "storage": "128 GB",
+            "ram": "3 GB",
+            "processor": "Apple A13 Bionic (7 nm+)",
+            "os": "iOS 13, upgradable to iOS 15",
+            "frontalcamera": "7 MP, f/2.2",
+            "backcamera": "12 MP, f/1.8 (wide)"
+        }
     },
     {
-        "name": "IPAD AIR 2021",
+        "name": "IPAD AIR 2020",
         "id": "ipadAir",
         "price": 1700,
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/ipadAir.png",
-        "stock": 9
+        "stock": 9,
+        "specifications": {
+            "screen": "10.9 pulgadas",
+            "storage": "256 GB",
+            "ram": "4 GB",
+            "processor": "Apple A14 Bionic (5 nm)",
+            "os": "iPadOS 14.1, upgradable to iPadOS 15",
+            "frontalcamera": "7 MP, f/2.0",
+            "backcamera": "12 MP, f/1.8, (wide)"
+        }
     },
     {
         "name": "AMAZON KINDLE",
@@ -195,7 +384,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/kindle.png",
-        "stock": 11
+        "stock": 11,
+        "specifications": {
+            "screen": "10.1 pulgadas",
+            "storage": "64 GB",
+            "ram": "4 GB",
+            "processor": "Mediatek MT8183 Helio P60T (12 nm)",
+            "os": "Android 9.0 (Pie), Fire OS 7",
+            "frontalcamera": "2MP",
+            "backcamera": "5MP"
+        }
     },
     {
         "name": "HUAWEI MATEPAD",
@@ -204,7 +402,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/matepad.png",
-        "stock": 12
+        "stock": 12,
+        "specifications": {
+            "screen": "10.95 pulgadas",
+            "storage": "256 GB",
+            "ram": "6 GB",
+            "processor": "Qualcomm SM8250 Snapdragon 865 (7 nm+)",
+            "os": "HarmonyOS 2.0",
+            "frontalcamera": "8 MP, f/2.0",
+            "backcamera": "13 MP, f/1.8"
+        }
     },
     {
         "name": "SAMSUNG TAB S6",
@@ -213,7 +420,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/tabs6.png",
-        "stock": 13
+        "stock": 13,
+        "specifications": {
+            "screen": "10.5 pulgadas",
+            "storage": "256 GB",
+            "ram": "8 GB",
+            "processor": "Qualcomm SM8150 Snapdragon 855 (7 nm)",
+            "os": "Android 9.0 (Pie), upgradable to Android 11, One UI 3.1",
+            "frontalcamera": "8 MP, f/2.0, 26mm (wide)",
+            "backcamera": "13 MP, f/2.0, 26mm (wide), 5 MP, f/2.2, 12mm (ultrawide)"
+        }
     },
     {
         "name": "SAMSUNG TAB A10",
@@ -222,7 +438,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/tabA10.png",
-        "stock": 14
+        "stock": 14,
+        "specifications": {
+            "screen": "10.1 pulgadas",
+            "storage": "128 GB SSD",
+            "ram": "3 GB",
+            "processor": "Exynos 7904 (14 nm)",
+            "os": "Android 9.0 (Pie), upgradable to Android 11, One UI 3.0",
+            "frontalcamera": "5 MP, f/2.2",
+            "backcamera": "8 MP, f/2.0"
+        }
     },
     {
         "name": "SMARTPAD 10",
@@ -231,7 +456,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/smartpad10.png",
-        "stock": 13
+        "stock": 13,
+        "specifications": {
+            "screen": "10.95 pulgadas",
+            "storage": "256 GB",
+            "ram": "6 GB",
+            "processor": "Qualcomm SM8250 Snapdragon 865 (7 nm+)",
+            "os": "HarmonyOS 2.0",
+            "frontalcamera": "8 MP, f/2.0",
+            "backcamera": "13 MP, f/1.8"
+        }
     },
     {
         "name": "LENOVO TAB E10",
@@ -240,7 +474,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/tabE10.png",
-        "stock": 11
+        "stock": 11,
+        "specifications": {
+            "screen": "10.1 pulgadas",
+            "storage": "64 GB",
+            "ram": "4 GB",
+            "processor": "Mediatek MT8183 Helio P60T (12 nm)",
+            "os": "Android 9.0 (Pie)",
+            "frontalcamera": "2MP",
+            "backcamera": "5MP"
+        }
     },
     {
         "name": "SAMSUNG TAB A7",
@@ -249,7 +492,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/tabA7.png",
-        "stock": 12
+        "stock": 12,
+        "specifications": {
+            "screen": "10.1 pulgadas",
+            "storage": "128 GB SSD",
+            "ram": "3 GB",
+            "processor": "Exynos 7904 (14 nm)",
+            "os": "Android 9.0 (Pie), upgradable to Android 11, One UI 3.0",
+            "frontalcamera": "5 MP, f/2.2",
+            "backcamera": "8 MP, f/2.0"
+        }
     },
     {
         "name": "IPAD 2020",
@@ -258,7 +510,16 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/ipad8th.png",
-        "stock": 14
+        "stock": 14,
+        "specifications": {
+            "screen": "10.9 pulgadas",
+            "storage": "256 GB",
+            "ram": "4 GB",
+            "processor": "Apple A14 Bionic (5 nm)",
+            "os": "iPadOS 14.1, upgradable to iPadOS 15",
+            "frontalcamera": "7 MP, f/2.0",
+            "backcamera": "12 MP, f/1.8, (wide)"
+        }
     },
     {
         "name": "YOGA TAB 10",
@@ -267,6 +528,15 @@
         "category": "TABLETS",
         "description": "Details Random",
         "pictureUrl": "../img/tablets/yogaTab10.png",
-        "stock": 10
+        "stock": 10,
+        "specifications": {
+            "screen": "10.1 pulgadas",
+            "storage": "64 GB",
+            "ram": "4 GB",
+            "processor": "Mediatek MT8183 Helio P60T (12 nm)",
+            "os": "Android 9.0 (Pie)",
+            "frontalcamera": "2MP",
+            "backcamera": "5MP"
+        }
     }
 ]

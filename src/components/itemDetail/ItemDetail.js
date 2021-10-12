@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {StoreContext} from '../../context/StoreContext'
 //Components
 import ItemCount from '../itemCount/ItemCount'
+import ItemSpecs from '../itemSpecs/ItemSpecs'
 //SCSS
 import './itemDetail.scss'
 
@@ -11,7 +12,7 @@ import './itemDetail.scss'
 
 const ItemDetail = ({item}) => {
 
-    const {name, pictureUrl, price, currentStock, id} = item
+    const {name, pictureUrl, price, currentStock, id, specs} = item
 
     const { 
         added, 
@@ -63,6 +64,7 @@ const ItemDetail = ({item}) => {
                     }
                 </div>
             </div>
+            <ItemSpecs specs={specs} />
         </>
     )
 }
