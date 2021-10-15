@@ -1,23 +1,33 @@
 import React, {useContext} from 'react'
-import {Link} from 'react-router-dom'
 import {StoreContext} from '../../context/StoreContext'
+import {Button} from 'react-bootstrap'
+import EmptyCart from '../EmptyCart/EmptyCart'
 import ItemInCart from '../itemInCart/ItemInCart'
 import './cart.scss'
 
 const Cart = () => {
 
-    const {cart} = useContext(StoreContext)
+    const {cart, handleTotal, handleClearAll} = useContext(StoreContext)
+
     return (
-        <div className='container'>
-            {
-                cart.length === 0 ?
-                <div className="cart-details"> 
-                    <p>Tu carrito esta vació</p>
-                    <Link className='btn btn-primary' to='/'>Agrega un producto</Link>
-                </div>
-                : cart.map((itemInCart)=> <ItemInCart key={itemInCart.item.id} details={itemInCart} />)
-            }
+        <div className='container cart_container'>
             
+                {cart.length === 0 ? 
+                    <EmptyCart />
+                    : <div className='cart_details'>
+                        {cart.map((itemInCart) => 
+                                <div key={itemInCart.item.id + itemInCart.quantity}  className='cart_items'>
+                                    <ItemInCart 
+                                        item={itemInCart} 
+                                    />
+                                </div>
+                        )}
+                    </div>
+                }
+                <div className='cart_total'> 
+                    <h2>Total: $ {handleTotal()}</h2>
+                    <Button variant="outline-danger" onClick={handleClearAll} >Borrar todo</Button>
+                </div>
             
         </div>
     )

@@ -19,7 +19,6 @@ const ItemDetail = ({item}) => {
         setAdded, 
         stock, 
         setStock, 
-        setCount, 
         dispatchCount,
     } = useContext(StoreContext)
 

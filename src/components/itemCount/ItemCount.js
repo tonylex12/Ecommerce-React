@@ -1,11 +1,10 @@
 import React, {useContext} from 'react'; 
 //context
 import {StoreContext, counterInitialState} from '../../context/StoreContext'
+import GenericCounter from '../genericCounter/GenericCounter'
 //BOOTSTRAP
-
 import Button from "react-bootstrap/Button";
-import { FaMinus } from "react-icons/fa"
-import { FaPlus } from "react-icons/fa"
+
 //STYLES
 import './itemcount.scss'
 
@@ -17,37 +16,32 @@ const ItemCount = ({currentStock, item}) => {
         counterCount
     } = useContext(StoreContext)
 
+    const onAdd = () => {
+        handleAdd(item)
+    }
+
     return (
         <>
-            <div className="counter">
-                <Button 
-                    onClick={
-                        () => counterCount > counterInitialState ? 
-                            dispatchCount('COUNTER_DECREMENT'): 
-                            null
-                        }
-                    disabled={counterCount === counterInitialState}
-                    variant="outline-secondary" 
-                >
-                    <FaMinus size={20} />
-                </Button>
-                <p>{counterCount}</p>
-                <Button 
-                    onClick={
-                        () => counterCount < item.stock ?
-                            dispatchCount('COUNTER_INCREMENT'): 
-                            null
-                    } 
-                    disabled={counterCount === currentStock} 
-                    variant="outline-secondary">
-                    <FaPlus size={20} />
-                </Button>
-            </div>
+            <GenericCounter
+                onIncrementAction={
+                    () => counterCount < item.stock ?
+                        dispatchCount('COUNTER_INCREMENT'): 
+                        null
+                }
+                onDecrementAction={
+                    () => counterCount > counterInitialState ? 
+                        dispatchCount('COUNTER_DECREMENT'): 
+                        null
+                }
+                affectedValue={counterCount}
+                disableIncrement={counterCount === currentStock}
+                disableDecrement={counterCount === counterInitialState}
+            />
             <Button 
                 id={item.id}
                 disabled={counterCount === 0} 
                 variant={counterCount === 0 ? 'outline-secondary' : 'primary'}
-                onClick={handleAdd}
+                onClick={onAdd}
             >Agregar al carrito</Button>
         </>
     )
