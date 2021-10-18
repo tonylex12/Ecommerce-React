@@ -5,16 +5,15 @@ import './cartWidget.scss';
 
 const CartWidget = () => {
 
-    const {totalQuantity} = useContext(StoreContext)
+    const {cartWidgetACC} = useContext(StoreContext)
 
     return(
         <>
-
-        {totalQuantity === 0 ? 
+        {cartWidgetACC === 0 ? 
         null
         : <Link to='/cart'>
         <div className="cartWidget">
-            <p>{totalQuantity}</p>
+            <p>{cartWidgetACC}</p>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0"

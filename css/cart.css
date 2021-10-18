@@ -16,4 +16,9 @@
   border: none;
   margin: 4px auto;
 }
+
+.container .cart_total_wrapper .cart_total .cart_total_buttons .btn-primary {
+  margin: 2rem auto;
+  display: block;
+}
 /*# sourceMappingURL=cart.css.map */

@@ -1,13 +1,13 @@
 .counter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1.25rem;
 }
 
 .counter .btn {
-  margin: 1rem .5rem;
+  margin: 1rem .75rem;
 }
 
 .counter .btn-primary {

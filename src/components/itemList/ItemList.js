@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 import './itemList.scss'
 
 const ItemList = ({item}) => {
-    const {id, name, price, pictureUrl} = item
+    const {id, description, name, price, pictureUrl} = item
 
     return(
         <Card>
@@ -16,6 +16,9 @@ const ItemList = ({item}) => {
                 <Card.Title>
                     {name}
                 </Card.Title>
+                <Card.Text>
+                    {description}
+                </Card.Text>
                 <Card.Text>
                     $ {price}
                 </Card.Text>

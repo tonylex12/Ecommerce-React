@@ -1,0 +1,15 @@
+.cart_empty {
+  margin: 0 auto;
+}
+
+.cart_empty h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.cart_empty .btn-primary {
+  margin: 2rem auto;
+  display: block;
+  width: 180px;
+}
+/*# sourceMappingURL=emptyCart.css.map */

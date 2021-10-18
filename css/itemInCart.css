@@ -1,13 +1,14 @@
 .productInCart {
   margin: 1rem auto;
   display: flex;
+  width: 25%;
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
 
 .productInCart img {
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   display: block;
 }
@@ -26,12 +27,34 @@
 }
 
 .productInCart .btn-outline-danger {
+  margin-top: 1rem;
   margin-bottom: 2rem;
   color: #e21f26;
   border-color: #e21f26;
 }
 
 .productInCart .btn-outline-danger:hover {
+  color: #fff;
+  background-color: #e21f26;
+}
+
+.cart_total {
+  margin: 0 auto;
+}
+
+.cart_total h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.cart_total .btn-outline-danger {
+  margin: 1rem auto;
+  display: block;
+  color: #e21f26;
+  border-color: #e21f26;
+}
+
+.cart_total .btn-outline-danger:hover {
   color: #fff;
   background-color: #e21f26;
 }
