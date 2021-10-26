@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react';
 import {getFirestore} from '../../firebase'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 //Context
-import {StoreContext} from '../../context/StoreContext'
+import { StoreContext } from '../../context/StoreContext'
 //Components
 import ItemList from '../itemList/ItemList'
 import Loading from '../loading/Loading'
@@ -11,56 +11,59 @@ import './itemListContainer.scss';
 
 const ItemListContainer = () => {
 
-    const {data, loading} = useContext(StoreContext)
-    const {id} = useParams()
+    const { loading, data } = useContext(StoreContext)
+    //const [data, setData] = useState([])
+    const { id } = useParams()
 
-    let [categoryQuery, setCategoryQuery] = useState([])
-
-    useEffect(() => {
+    /* useEffect(() => {
+        
+        setData([])
         const db = getFirestore()
-        const itemsCollection = db.collection('data')
+        const itemsCollection = db.collection('items')
         if (id) {
-            var query = itemsCollection.where("category", "==", id);
+            const query = itemsCollection.where("category", "==", id);
             query.get()
             .then((querySnapshot)=>{
-                setCategoryQuery([])
                 querySnapshot.forEach(function(doc) {
-                    const categoryQueryRes = doc.data()
-                    setCategoryQuery(categoryQuery => [...categoryQuery, categoryQueryRes])
+                    const dataRes = doc.data()
+                    setData(data => [...data, dataRes])
+                });
+            })
+        } else {
+            itemsCollection.get()
+            .then((querySnapshot)=> {
+                querySnapshot.forEach(function(doc) {
+                    const dataRes = doc.data()
+                    setData(data => [...data, dataRes])
                 });
             })
         }
-        
-    }, [id])
-    useEffect(() => {
-        console.log('Cambio en State CategoryQuery => ', categoryQuery)
-    }, [categoryQuery])
+        setLoading(false)
+    }, [id]) */
 
     return(
         <div className="products-container">
-            { loading ? 
-                <Loading /> 
-                : data.map((product)=>{ 
-                    return( id ? 
+            { loading ?
+                <Loading />
+                : data.map((product)=>{
+                    return( id ?
                         product.category === id ?
                         <ItemList
                             key={product.id}
                             item={{
                                 id: product.id,
                                 name: product.name,
-                                description: product.description,
                                 pictureUrl: product.pictureUrl,
                                 price: product.price,
                                 stock:product.stock
                             }}
-                        /> 
-                        : null 
-                    : <ItemList 
+                        />
+                        : null
+                    : <ItemList
                         key={product.id}
                         item={{
                             id: product.id,
                             name: product.name,
-                            description: product.description,
                             pictureUrl: product.pictureUrl,
                             price: product.price,
                             stock:product.stock

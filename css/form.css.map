@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/components/form/form.scss"
+    ],
+    "names": [],
+    "file": "form.css"
+}

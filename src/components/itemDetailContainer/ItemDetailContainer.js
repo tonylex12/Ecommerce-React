@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect} from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import {getFirestore} from '../../firebase'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 //Context
-import {StoreContext} from '../../context/StoreContext'
+import { StoreContext } from '../../context/StoreContext'
 //Components
 import ItemDetail from '../itemDetail/ItemDetail'
 import Loading from '../loading/Loading'
@@ -11,53 +11,50 @@ import './itemDetailsContainer.scss'
 
 const ItemDetailContainer = () => {
 
-    const {loading, data} = useContext(StoreContext)
+    const { data } = useContext(StoreContext)
+    const [product, setProduct] = useState()
     const params = useParams()
+    /* const [data, setData] = useState([]) */
 
-    const [realTimePrice, setRealTimePrice] = useState()
-
-    useEffect(() => {
+    /* useEffect(() => {
         const db = getFirestore()
-        const itemsCollection = db.collection('data')
+        const itemsCollection = db.collection('items')
         const query = itemsCollection.doc(params.id)
         query.get()
         .then((querySnapshot)=>{
             if (!querySnapshot.exists) {
                 console.log('noexiste')
             } else {
-                const price = querySnapshot.data()
-                setRealTimePrice(price.price)
+                const dataRes = querySnapshot.data()
+                setLoading(false)
+                setData(data => [...data, dataRes])
             }
         })
         .catch((err)=>{
             console.log(err)
         })
-    }, [])
+    }, []) */
+
+    useEffect(() => {
+        setProduct(data.find(p => params.id === p.id))
+    }, [params.id, data])
 
     return(
         <div className="itemDetailContainer">
-            { loading ? 
-                <Loading /> : 
-                data.map((product)=>{
-                    return(
-                        product.id === params.id ? 
-                        <ItemDetail 
-                            key={product.id}
-                            item={{
-                                    id: product.id,
-                                    name : product.name,
-                                    pictureUrl : product.pictureUrl,
-                                    category : product.category,
-                                    description : product.description,
-                                    price : realTimePrice,
-                                    currentStock : product.stock,
-                                    specs: product.specifications,
-                                    params: params.id
-                                }}
-                        /> 
-                        : null
-                    )
-                })
+            { product ? 
+                    <ItemDetail 
+                        item={{
+                            id: product.id,
+                            name : product.name,
+                            pictureUrl : product.pictureUrl,
+                            category : product.category,
+                            description : product.description,
+                            price : product.price,
+                            currentStock : product.stock,
+                            specs: product.specifications
+                        }}
+                    />
+                    : <Loading />
             }
         </div>
     )

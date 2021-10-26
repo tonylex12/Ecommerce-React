@@ -17,8 +17,12 @@
   margin: 4px auto;
 }
 
-.container .cart_total_wrapper .cart_total .cart_total_buttons .btn-primary {
+.container .cart_total_wrapper .btn-primary {
   margin: 2rem auto;
   display: block;
+}
+
+.container .cart_total_wrapper .btn-primary:hover {
+  background-color: #E21F26;
 }
 /*# sourceMappingURL=cart.css.map */

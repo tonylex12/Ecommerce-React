@@ -14,12 +14,11 @@
         }
     }
     .cart_total_wrapper {
-        .cart_total {
-            .cart_total_buttons {
-                .btn-primary {
-                    margin: 2rem auto;
-                    display: block;
-                }
+        .btn-primary {
+            margin: 2rem auto;
+            display: block;
+            &:hover {
+                background-color: #E21F26;
             }
         }
     }

@@ -1,0 +1,66 @@
+.container_new_purchase {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container_new_purchase h2 {
+  margin-bottom: 2.5rem;
+}
+
+.container_new_purchase .new_purchase {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_new_purchase .new_purchase h4 {
+  margin-bottom: 1.5rem;
+}
+
+.container_new_purchase .new_purchase .new_purchase_info {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container_new_purchase .new_purchase .new_purchase_info p:last-child {
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.container_new_purchase .new_purchase .new_purchase_info .new_purchase_info_id {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_new_purchase .new_purchase .new_purchase_info .new_purchase_info_id p {
+  margin-bottom: 0;
+}
+
+.container_new_purchase .new_purchase .new_purchase_info .new_purchase_info_id p:last-child {
+  padding: .1rem .4rem;
+  margin-left: .2rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #007bff;
+  font-weight: 700;
+  font-size: .9rem;
+  font-style: italic;
+}
+
+.container_new_purchase .new_purchase .new_purchase_items {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_new_purchase .new_purchase .new_purchase_items tbody tr:last-child td:first-child {
+  text-align: right;
+}
+/*# sourceMappingURL=newPurchase.css.map */
