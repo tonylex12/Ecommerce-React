@@ -181,10 +181,10 @@ const StoreProvider = ({children}) => {
         });
     }
     //COMPRA REALIZADA
-    const [name, setName] = useState('Antony')
-    const [surname, setSurname] = useState('Huerto')
-    const [email, setEmail] = useState('ahuerto@coderhouse.com')
-    const [phoneNumber, setPhoneNumber] = useState('935377552')
+    const [name, setName] = useState('')
+    const [surname, setSurname] = useState('')
+    const [email, setEmail] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
 
     const [newPurchase, setNewPurchase] = useState('')
     
