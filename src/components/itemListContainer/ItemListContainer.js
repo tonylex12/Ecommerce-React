@@ -11,15 +11,15 @@ import './itemListContainer.scss';
 
 const ItemListContainer = () => {
 
-    const { loading, data } = useContext(StoreContext)
-    //const [data, setData] = useState([])
-    const { id } = useParams()
+    const {loading, setLoading } = useContext(StoreContext)
+    const [data, setData] = useState([])
+    const {id} = useParams()
 
-    /* useEffect(() => {
-        
+    useEffect(() => {
+        setLoading(true)
         setData([])
         const db = getFirestore()
-        const itemsCollection = db.collection('items')
+        const itemsCollection = db.collection('data')
         if (id) {
             const query = itemsCollection.where("category", "==", id);
             query.get()
@@ -32,6 +32,7 @@ const ItemListContainer = () => {
         } else {
             itemsCollection.get()
             .then((querySnapshot)=> {
+
                 querySnapshot.forEach(function(doc) {
                     const dataRes = doc.data()
                     setData(data => [...data, dataRes])
@@ -39,27 +40,14 @@ const ItemListContainer = () => {
             })
         }
         setLoading(false)
-    }, [id]) */
+    }, [id])
 
     return(
         <div className="products-container">
-            { loading ?
-                <Loading />
-                : data.map((product)=>{
-                    return( id ?
-                        product.category === id ?
-                        <ItemList
-                            key={product.id}
-                            item={{
-                                id: product.id,
-                                name: product.name,
-                                pictureUrl: product.pictureUrl,
-                                price: product.price,
-                                stock:product.stock
-                            }}
-                        />
-                        : null
-                    : <ItemList
+            { loading ? 
+                <Loading /> 
+                : data.map((product)=>{ 
+                    return(<ItemList
                         key={product.id}
                         item={{
                             id: product.id,

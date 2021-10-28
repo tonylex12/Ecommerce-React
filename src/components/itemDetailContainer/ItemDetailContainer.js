@@ -11,14 +11,17 @@ import './itemDetailsContainer.scss'
 
 const ItemDetailContainer = () => {
 
-    const { data } = useContext(StoreContext)
-    const [product, setProduct] = useState()
+    const {loading, setLoading/* , data */} = useContext(StoreContext)
+    const [data, setData] = useState([])
     const params = useParams()
-    /* const [data, setData] = useState([]) */
 
-    /* useEffect(() => {
+    useEffect(() => {
+        console.log(data)
+    }, [data])
+
+    useEffect(() => {
         const db = getFirestore()
-        const itemsCollection = db.collection('items')
+        const itemsCollection = db.collection('data')
         const query = itemsCollection.doc(params.id)
         query.get()
         .then((querySnapshot)=>{
@@ -33,28 +36,27 @@ const ItemDetailContainer = () => {
         .catch((err)=>{
             console.log(err)
         })
-    }, []) */
-
-    useEffect(() => {
-        setProduct(data.find(p => params.id === p.id))
-    }, [params.id, data])
+    }, [])
 
     return(
         <div className="itemDetailContainer">
-            { product ? 
-                    <ItemDetail 
+            { loading ? 
+                <Loading /> : 
+                data.map((product)=>{
+                    return(<ItemDetail 
+                        key={product.id}
                         item={{
-                            id: product.id,
-                            name : product.name,
-                            pictureUrl : product.pictureUrl,
-                            category : product.category,
-                            description : product.description,
-                            price : product.price,
-                            currentStock : product.stock,
-                            specs: product.specifications
-                        }}
-                    />
-                    : <Loading />
+                                id: product.id,
+                                name : product.name,
+                                pictureUrl : product.pictureUrl,
+                                category : product.category,
+                                description : product.description,
+                                price : product.price,
+                                currentStock : product.stock,
+                                specs: product.specifications
+                            }}
+                    />)
+                })
             }
         </div>
     )
