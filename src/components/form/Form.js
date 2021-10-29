@@ -1,5 +1,5 @@
 
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 //context
 import { StoreContext } from '../../context/StoreContext'
 
