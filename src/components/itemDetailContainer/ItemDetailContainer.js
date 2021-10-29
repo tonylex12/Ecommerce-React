@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     return(
-        <div className="itemDetailContainer">
+        <div className="itemDetailContainer mb-0">
             { loading ? 
                 <Loading /> : 
                 data.map((product)=>{

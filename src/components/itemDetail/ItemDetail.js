@@ -31,7 +31,7 @@ const ItemDetail = ({item}) => {
 
     return(
         <>
-            <div className="detailOverview">
+            <div className="detailOverview mt-5 mb-1">
                 <img alt={id} src={pictureUrl} />
                 <div className="detailsDescription">
                     <h3>{name}</h3>

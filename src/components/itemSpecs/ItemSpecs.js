@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 
 const ItemSpecs = ({specs}) =>{
     return(
-        <Table striped responsive hover variant="dark">
+        <Table striped responsive hover variant="dark" className="mt-5 mb-0">
             <thead>
                 <tr>
                     <td  colSpan="2"><h3>Especificaciones</h3></td>

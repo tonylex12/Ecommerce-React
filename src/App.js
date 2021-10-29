@@ -15,7 +15,7 @@ const App = () => {
         <Router>
             <StoreProvider>
                 <AppNavBar />
-                <Main />
+                <Main className="mb-0"/>
                 <AppFooter
                     copy="&copy; Copyright 2021"
                 />
