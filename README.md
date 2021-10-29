@@ -14,8 +14,6 @@ Proyecto creado para el curso de React JS en CODERHOUSE.
 
 ### Dependencias utilizadas (ver en [package.json](https://github.com/tonylex12/Ecommerce-React/blob/main/package.json) )
 
-### Iniciar el proyecto
-
 #### Ten en cuenta que este proyecto utiliza una *Cloud Firestore* de [Google Firebase](https://firebase.google.com/) y los datos de acceso no están incluidos en el repositorio 
 
 Para simular este comportamiento es necesario crear un nuevo Project dentro de firebase con el título de tu preferencia y agregar una web app al mismo dentro de la configuración de firebase (guardar los datos de configuración, para utilizarlos luego)
