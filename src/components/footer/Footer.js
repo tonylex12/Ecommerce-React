@@ -3,7 +3,7 @@ import './footer.scss';
 
 const Footer = ({copy}) => {
     return (
-        <footer>
+        <footer className="fixed-bottom">
             <p>LEXTEC {copy}</p>
         </footer>
     )

@@ -13,7 +13,7 @@ const CartTotal = () => {
 
 
     return (
-        <div className='cart_total_wrapper'> 
+        <div className='cart_total_wrapper m-5'> 
             <div className='cart_total'>
                 <h2>Total: $ {handleTotal()}</h2>
                 { cart.length === 0 ?
