@@ -4,7 +4,7 @@ import './footer.scss';
 const Footer = ({copy}) => {
     return (
         <footer>
-            <p>{copy}</p>
+            <p>LEXTEC {copy}</p>
         </footer>
     )
 }

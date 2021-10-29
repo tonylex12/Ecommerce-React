@@ -15,11 +15,17 @@
 
 .navbar .search input {
   width: 250px;
-  margin: 0 1rem;
+  margin: 0 .75rem;
+}
+
+.navbar .search .btn-danger {
+  background-color: #e21f26;
+  margin-left: 0;
 }
 
 .navbar .nav-link {
   margin: 0 5px;
+  padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link.active {

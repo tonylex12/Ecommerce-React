@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import {getFirestore} from '../../firebase'
+import { getFirestore } from '../../firebase'
 import { useParams } from 'react-router-dom'
 //Context
 import { StoreContext } from '../../context/StoreContext'
@@ -11,15 +11,16 @@ import './itemListContainer.scss';
 
 const ItemListContainer = () => {
 
-    const {loading, setLoading } = useContext(StoreContext)
-    const [data, setData] = useState([])
-    const {id} = useParams()
+    const { loading, data } = useContext(StoreContext)
+    //const [data, setData] = useState([])
+    const params = useParams()
+    const { id, input } = useParams()
 
-    useEffect(() => {
-        setLoading(true)
+    /* useEffect(() => {
+        
         setData([])
         const db = getFirestore()
-        const itemsCollection = db.collection('data')
+        const itemsCollection = db.collection('items')
         if (id) {
             const query = itemsCollection.where("category", "==", id);
             query.get()
@@ -32,7 +33,6 @@ const ItemListContainer = () => {
         } else {
             itemsCollection.get()
             .then((querySnapshot)=> {
-
                 querySnapshot.forEach(function(doc) {
                     const dataRes = doc.data()
                     setData(data => [...data, dataRes])
@@ -40,14 +40,45 @@ const ItemListContainer = () => {
             })
         }
         setLoading(false)
-    }, [id])
+    }, [id]) */
+
+    
 
     return(
         <div className="products-container">
-            { loading ? 
-                <Loading /> 
-                : data.map((product)=>{ 
-                    return(<ItemList
+            
+            { loading ?
+                <Loading />
+                : data.map((product)=>{
+                    return( id ?
+                    product.category === id ?
+                        <ItemList
+                            key={product.id}
+                            item={{
+                                id: product.id,
+                                name: product.name,
+                                pictureUrl: product.pictureUrl,
+                                price: product.price,
+                                stock:product.stock
+                            }}
+                        />
+                        : null
+                    : input ?
+                        (product.name.toUpperCase().indexOf(input) > -1)
+                        ||
+                        (product.description.toUpperCase().indexOf(input) > -1) ?
+                        <ItemList
+                            key={product.id}
+                            item={{
+                                id: product.id,
+                                name: product.name,
+                                pictureUrl: product.pictureUrl,
+                                price: product.price,
+                                stock:product.stock
+                            }}
+                        />
+                        : null
+                    : <ItemList
                         key={product.id}
                         item={{
                             id: product.id,
@@ -56,7 +87,9 @@ const ItemListContainer = () => {
                             price: product.price,
                             stock:product.stock
                         }}
-                    />)
+                    />
+                    )
+                    
                 })
             }
         </div>
